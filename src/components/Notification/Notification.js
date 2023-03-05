@@ -8,7 +8,7 @@ export default function Notification({ message }) {
       <iframe
         title="Fun"
         className={css.gif}
-        src="https://giphy.com/embed/3o7aTskHEUdgCQAXde"
+        src="https://giphy.com/embed/VGbsjSuQAnj0rWFF4o"
         alt="gif"
       ></iframe>
     </>
