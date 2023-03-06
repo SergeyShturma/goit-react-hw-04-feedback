@@ -16,7 +16,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
             Positive feedback: {positivePercentage}%
           </li>
         </ul>
-        <NotificationGood />
+        <NotificationGood good={good} neutral={neutral} bad={bad} />
       </>
     ) : (
       <Notification message="No feedback given" />

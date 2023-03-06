@@ -4,12 +4,20 @@ import css from 'components/App.module.css';
 import Statistics from 'components/Statistics/Statistics';
 import Section from './Section/Section';
 
-const options = ['good', 'bad', 'neutral'];
+const options = ['good', 'neutral', 'bad'];
 
 export default function App() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
+  // const [isGifOpen, setIsGifOpen] = useState(false);
+
+  // const showGif = () => {
+  //   setIsGifOpen(true);
+  // };
+  // const handleGif = () => {
+  //   setIsGifOpen(false);
+  // };
 
   const countTotalFb = () => {
     return good + neutral + bad;
@@ -19,19 +27,6 @@ export default function App() {
     let total = countTotalFb();
     return total ? Math.round((good / total) * 100) : 0;
   };
-
-  // const handleFeedback = e => {
-  //   switch (e) {
-  //     case 'good':
-  //       return setGood(prevState => prevState + 1);
-  //     case 'neutral':
-  //       return setNeutral(prevState => prevState + 1);
-  //     case 'bad':
-  //       return setBad(prevState => prevState + 1);
-  //     default:
-  //       return;
-  //   }
-  // };
 
   const handleFeedback = e => {
     const option = e.target.innerText.toLowerCase();
