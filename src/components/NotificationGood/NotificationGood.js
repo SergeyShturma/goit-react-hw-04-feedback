@@ -1,7 +1,7 @@
 import css from './NotificationGood.module.css';
 
-export default function NotificationGood({ good, neutral, bad }) {
-  if (good) {
+export default function NotificationGood({ type }) {
+  if (type === 'good') {
     return (
       <iframe
         title="Fun"
@@ -12,7 +12,7 @@ export default function NotificationGood({ good, neutral, bad }) {
     );
   }
 
-  if (neutral) {
+  if (type === 'neutral') {
     return (
       <iframe
         title="Fun"
@@ -23,7 +23,7 @@ export default function NotificationGood({ good, neutral, bad }) {
     );
   }
 
-  if (bad) {
+  if (type === 'bad') {
     return (
       <iframe
         title="Fun"
